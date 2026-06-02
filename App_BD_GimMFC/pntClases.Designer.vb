@@ -68,7 +68,7 @@ Partial Class pntClases
         Me.btnBuscarClases.Font = New System.Drawing.Font("Mongolian Baiti", 8.142858!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscarClases.Image = CType(resources.GetObject("btnBuscarClases.Image"), System.Drawing.Image)
         Me.btnBuscarClases.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscarClases.Location = New System.Drawing.Point(524, 168)
+        Me.btnBuscarClases.Location = New System.Drawing.Point(690, 94)
         Me.btnBuscarClases.Name = "btnBuscarClases"
         Me.btnBuscarClases.Size = New System.Drawing.Size(129, 56)
         Me.btnBuscarClases.TabIndex = 22
