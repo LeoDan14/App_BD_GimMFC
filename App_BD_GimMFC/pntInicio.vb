@@ -18,7 +18,7 @@ Public Class pntInicio
             Exit Sub
         End If
 
-        Dim conexion As New SqlConnection("Data Source=DESKTOP-M9E0OMK\SQLEXPRESS;Initial Catalog=Gimnasio;Integrated Security=True")
+        Dim conexion As New SqlConnection("Data Source=DESKTOP-P1KRNOI\SQLEXPRESS;Initial Catalog=Gimnasio;Integrated Security=True")
         'busca en la tabla Empleado un registro que coincida con los valores ingresados en las cajas de texto'
         Dim comando As New SqlCommand("SELECT * FROM Empleado WHERE Nombre_Empleado=@usuario AND Contrasena=@contrasena", conexion)
 
