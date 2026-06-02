@@ -31,10 +31,12 @@ Public Class pntInicio
             Dim lector As SqlDataReader = comando.ExecuteReader()
             'sqldatareader lee los resultados de la consulta sql, executereader ejecuta la consulta y devuelve los registros encontrados'
             If lector.HasRows Then
+
+                Me.Hide()
                 'lector.hasrows veriifica si la consulta devolvio algun registro'
                 Dim frm As New pntOpcion()
                 frm.ShowDialog()
-
+                Me.Show()
                 ' limpiar campos después de acceder
                 txtUsuario.Clear()
                 txtContraseña.Clear()
