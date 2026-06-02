@@ -35,22 +35,23 @@ Partial Class pntOpcion
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(298, 60)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Red
+        Me.Label1.Location = New System.Drawing.Point(260, 39)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(354, 48)
+        Me.Label1.Size = New System.Drawing.Size(167, 40)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Menú de opciones:"
+        Me.Label1.Text = "Opciones:"
         '
         'btnEstudiante
         '
         Me.btnEstudiante.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEstudiante.Image = CType(resources.GetObject("btnEstudiante.Image"), System.Drawing.Image)
         Me.btnEstudiante.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEstudiante.Location = New System.Drawing.Point(307, 162)
+        Me.btnEstudiante.Location = New System.Drawing.Point(50, 119)
+        Me.btnEstudiante.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnEstudiante.Name = "btnEstudiante"
-        Me.btnEstudiante.Size = New System.Drawing.Size(275, 98)
+        Me.btnEstudiante.Size = New System.Drawing.Size(160, 62)
         Me.btnEstudiante.TabIndex = 22
         Me.btnEstudiante.Text = "Estudiantes"
         Me.btnEstudiante.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -61,9 +62,10 @@ Partial Class pntOpcion
         Me.btnClases.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnClases.Image = CType(resources.GetObject("btnClases.Image"), System.Drawing.Image)
         Me.btnClases.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnClases.Location = New System.Drawing.Point(307, 277)
+        Me.btnClases.Location = New System.Drawing.Point(267, 119)
+        Me.btnClases.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnClases.Name = "btnClases"
-        Me.btnClases.Size = New System.Drawing.Size(198, 94)
+        Me.btnClases.Size = New System.Drawing.Size(160, 62)
         Me.btnClases.TabIndex = 23
         Me.btnClases.Text = "Clases"
         Me.btnClases.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -74,9 +76,10 @@ Partial Class pntOpcion
         Me.btnVentas.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnVentas.Image = CType(resources.GetObject("btnVentas.Image"), System.Drawing.Image)
         Me.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnVentas.Location = New System.Drawing.Point(306, 502)
+        Me.btnVentas.Location = New System.Drawing.Point(153, 215)
+        Me.btnVentas.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnVentas.Name = "btnVentas"
-        Me.btnVentas.Size = New System.Drawing.Size(218, 77)
+        Me.btnVentas.Size = New System.Drawing.Size(160, 62)
         Me.btnVentas.TabIndex = 24
         Me.btnVentas.Text = "Ventas"
         Me.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -87,9 +90,10 @@ Partial Class pntOpcion
         Me.bntEmpleados.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bntEmpleados.Image = CType(resources.GetObject("bntEmpleados.Image"), System.Drawing.Image)
         Me.bntEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.bntEmpleados.Location = New System.Drawing.Point(307, 389)
+        Me.bntEmpleados.Location = New System.Drawing.Point(484, 119)
+        Me.bntEmpleados.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.bntEmpleados.Name = "bntEmpleados"
-        Me.bntEmpleados.Size = New System.Drawing.Size(249, 94)
+        Me.bntEmpleados.Size = New System.Drawing.Size(160, 62)
         Me.bntEmpleados.TabIndex = 25
         Me.bntEmpleados.Text = "Empleados"
         Me.bntEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -100,9 +104,10 @@ Partial Class pntOpcion
         Me.btnCompras.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCompras.Image = CType(resources.GetObject("btnCompras.Image"), System.Drawing.Image)
         Me.btnCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCompras.Location = New System.Drawing.Point(306, 596)
+        Me.btnCompras.Location = New System.Drawing.Point(386, 215)
+        Me.btnCompras.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnCompras.Name = "btnCompras"
-        Me.btnCompras.Size = New System.Drawing.Size(217, 82)
+        Me.btnCompras.Size = New System.Drawing.Size(160, 62)
         Me.btnCompras.TabIndex = 26
         Me.btnCompras.Text = "Compras"
         Me.btnCompras.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -113,9 +118,10 @@ Partial Class pntOpcion
         Me.btnRegresarEst.Font = New System.Drawing.Font("Mongolian Baiti", 8.142858!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRegresarEst.Image = CType(resources.GetObject("btnRegresarEst.Image"), System.Drawing.Image)
         Me.btnRegresarEst.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnRegresarEst.Location = New System.Drawing.Point(766, 629)
+        Me.btnRegresarEst.Location = New System.Drawing.Point(484, 320)
+        Me.btnRegresarEst.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnRegresarEst.Name = "btnRegresarEst"
-        Me.btnRegresarEst.Size = New System.Drawing.Size(130, 60)
+        Me.btnRegresarEst.Size = New System.Drawing.Size(129, 50)
         Me.btnRegresarEst.TabIndex = 27
         Me.btnRegresarEst.Text = "Regresar"
         Me.btnRegresarEst.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -123,9 +129,9 @@ Partial Class pntOpcion
         '
         'pntOpcion
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1275, 772)
+        Me.ClientSize = New System.Drawing.Size(695, 406)
         Me.Controls.Add(Me.btnRegresarEst)
         Me.Controls.Add(Me.btnCompras)
         Me.Controls.Add(Me.bntEmpleados)
@@ -133,7 +139,6 @@ Partial Class pntOpcion
         Me.Controls.Add(Me.btnClases)
         Me.Controls.Add(Me.btnEstudiante)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.Name = "pntOpcion"
         Me.Text = "pntOpcion"
         Me.ResumeLayout(False)
