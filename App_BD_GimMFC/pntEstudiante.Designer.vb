@@ -44,6 +44,7 @@ Partial Class pntEstudiante
         Me.txtContacto = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.dtpFechaIngreso = New System.Windows.Forms.DateTimePicker()
+        Me.Label10 = New System.Windows.Forms.Label()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -51,7 +52,7 @@ Partial Class pntEstudiante
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Mongolian Baiti", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(65, 254)
+        Me.Label1.Location = New System.Drawing.Point(65, 201)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(182, 23)
         Me.Label1.TabIndex = 0
@@ -61,7 +62,7 @@ Partial Class pntEstudiante
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(69, 159)
+        Me.Label2.Location = New System.Drawing.Point(64, 133)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(316, 25)
         Me.Label2.TabIndex = 1
@@ -71,7 +72,7 @@ Partial Class pntEstudiante
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(65, 315)
+        Me.Label3.Location = New System.Drawing.Point(64, 253)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(657, 25)
         Me.Label3.TabIndex = 2
@@ -81,7 +82,7 @@ Partial Class pntEstudiante
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(219, 58)
+        Me.Label4.Location = New System.Drawing.Point(305, 39)
         Me.Label4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(212, 48)
@@ -90,16 +91,16 @@ Partial Class pntEstudiante
         '
         'txtIdEstudiante
         '
-        Me.txtIdEstudiante.Location = New System.Drawing.Point(275, 248)
+        Me.txtIdEstudiante.Location = New System.Drawing.Point(275, 195)
         Me.txtIdEstudiante.Name = "txtIdEstudiante"
-        Me.txtIdEstudiante.Size = New System.Drawing.Size(280, 29)
+        Me.txtIdEstudiante.Size = New System.Drawing.Size(335, 29)
         Me.txtIdEstudiante.TabIndex = 4
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Mongolian Baiti", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(65, 394)
+        Me.Label5.Location = New System.Drawing.Point(65, 315)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(185, 23)
         Me.Label5.TabIndex = 7
@@ -109,7 +110,7 @@ Partial Class pntEstudiante
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Mongolian Baiti", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(65, 439)
+        Me.Label6.Location = New System.Drawing.Point(79, 383)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(109, 23)
         Me.Label6.TabIndex = 8
@@ -119,7 +120,7 @@ Partial Class pntEstudiante
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Mongolian Baiti", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(56, 483)
+        Me.Label7.Location = New System.Drawing.Point(56, 432)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(210, 23)
         Me.Label7.TabIndex = 9
@@ -127,21 +128,21 @@ Partial Class pntEstudiante
         '
         'txtNombreEstudiantes
         '
-        Me.txtNombreEstudiantes.Location = New System.Drawing.Point(275, 390)
+        Me.txtNombreEstudiantes.Location = New System.Drawing.Point(275, 311)
         Me.txtNombreEstudiantes.Name = "txtNombreEstudiantes"
         Me.txtNombreEstudiantes.Size = New System.Drawing.Size(319, 29)
         Me.txtNombreEstudiantes.TabIndex = 10
         '
         'txtDireccion
         '
-        Me.txtDireccion.Location = New System.Drawing.Point(275, 435)
+        Me.txtDireccion.Location = New System.Drawing.Point(275, 377)
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(319, 29)
         Me.txtDireccion.TabIndex = 11
         '
         'dtpFechaNac
         '
-        Me.dtpFechaNac.Location = New System.Drawing.Point(275, 477)
+        Me.dtpFechaNac.Location = New System.Drawing.Point(272, 432)
         Me.dtpFechaNac.Name = "dtpFechaNac"
         Me.dtpFechaNac.Size = New System.Drawing.Size(319, 29)
         Me.dtpFechaNac.TabIndex = 12
@@ -182,7 +183,7 @@ Partial Class pntEstudiante
         Me.btnBuscarEstudiante.Font = New System.Drawing.Font("Mongolian Baiti", 8.142858!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscarEstudiante.Image = CType(resources.GetObject("btnBuscarEstudiante.Image"), System.Drawing.Image)
         Me.btnBuscarEstudiante.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscarEstudiante.Location = New System.Drawing.Point(583, 241)
+        Me.btnBuscarEstudiante.Location = New System.Drawing.Point(641, 162)
         Me.btnBuscarEstudiante.Name = "btnBuscarEstudiante"
         Me.btnBuscarEstudiante.Size = New System.Drawing.Size(112, 50)
         Me.btnBuscarEstudiante.TabIndex = 21
@@ -219,7 +220,7 @@ Partial Class pntEstudiante
         'PictureBox3
         '
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(88, 39)
+        Me.PictureBox3.Location = New System.Drawing.Point(141, 21)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(109, 82)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -228,7 +229,7 @@ Partial Class pntEstudiante
         '
         'txtContacto
         '
-        Me.txtContacto.Location = New System.Drawing.Point(275, 521)
+        Me.txtContacto.Location = New System.Drawing.Point(272, 485)
         Me.txtContacto.Name = "txtContacto"
         Me.txtContacto.Size = New System.Drawing.Size(319, 29)
         Me.txtContacto.TabIndex = 24
@@ -237,7 +238,7 @@ Partial Class pntEstudiante
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Mongolian Baiti", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(65, 527)
+        Me.Label9.Location = New System.Drawing.Point(56, 491)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(102, 23)
         Me.Label9.TabIndex = 25
@@ -245,16 +246,27 @@ Partial Class pntEstudiante
         '
         'dtpFechaIngreso
         '
-        Me.dtpFechaIngreso.Location = New System.Drawing.Point(965, 39)
+        Me.dtpFechaIngreso.Location = New System.Drawing.Point(272, 535)
         Me.dtpFechaIngreso.Name = "dtpFechaIngreso"
-        Me.dtpFechaIngreso.Size = New System.Drawing.Size(280, 29)
+        Me.dtpFechaIngreso.Size = New System.Drawing.Size(322, 29)
         Me.dtpFechaIngreso.TabIndex = 26
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Mongolian Baiti", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(79, 540)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(176, 23)
+        Me.Label10.TabIndex = 27
+        Me.Label10.Text = "Fecha de ingreso:"
         '
         'pntEstudiante
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1275, 772)
+        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.dtpFechaIngreso)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.txtContacto)
@@ -305,4 +317,5 @@ Partial Class pntEstudiante
     Friend WithEvents txtContacto As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents dtpFechaIngreso As DateTimePicker
+    Friend WithEvents Label10 As Label
 End Class

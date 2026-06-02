@@ -42,10 +42,10 @@ Partial Class pntEmpleados
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(149, 45)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(205, 68)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(155, 35)
+        Me.Label4.Size = New System.Drawing.Size(216, 48)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Empleados"
         '
@@ -54,10 +54,9 @@ Partial Class pntEmpleados
         Me.btnRegresarEmp.Font = New System.Drawing.Font("Mongolian Baiti", 8.142858!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRegresarEmp.Image = CType(resources.GetObject("btnRegresarEmp.Image"), System.Drawing.Image)
         Me.btnRegresarEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnRegresarEmp.Location = New System.Drawing.Point(719, 379)
-        Me.btnRegresarEmp.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnRegresarEmp.Location = New System.Drawing.Point(989, 568)
         Me.btnRegresarEmp.Name = "btnRegresarEmp"
-        Me.btnRegresarEmp.Size = New System.Drawing.Size(114, 77)
+        Me.btnRegresarEmp.Size = New System.Drawing.Size(157, 116)
         Me.btnRegresarEmp.TabIndex = 21
         Me.btnRegresarEmp.Text = "Regresar"
         Me.btnRegresarEmp.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -66,10 +65,9 @@ Partial Class pntEmpleados
         'PictureBox3
         '
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(54, 45)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox3.Location = New System.Drawing.Point(74, 68)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(79, 55)
+        Me.PictureBox3.Size = New System.Drawing.Size(109, 82)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 22
         Me.PictureBox3.TabStop = False
@@ -78,10 +76,9 @@ Partial Class pntEmpleados
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(50, 128)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(69, 192)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(219, 18)
+        Me.Label2.Size = New System.Drawing.Size(308, 25)
         Me.Label2.TabIndex = 23
         Me.Label2.Text = "Para buscar a un empleado:"
         '
@@ -89,29 +86,26 @@ Partial Class pntEmpleados
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Mongolian Baiti", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(51, 175)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(70, 262)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(134, 16)
+        Me.Label1.Size = New System.Drawing.Size(176, 23)
         Me.Label1.TabIndex = 24
         Me.Label1.Text = "ID del Empleado:"
         '
         'txtIdEmpleado
         '
-        Me.txtIdEmpleado.Location = New System.Drawing.Point(198, 169)
-        Me.txtIdEmpleado.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtIdEmpleado.Location = New System.Drawing.Point(272, 254)
         Me.txtIdEmpleado.Name = "txtIdEmpleado"
-        Me.txtIdEmpleado.Size = New System.Drawing.Size(205, 22)
+        Me.txtIdEmpleado.Size = New System.Drawing.Size(280, 29)
         Me.txtIdEmpleado.TabIndex = 25
         '
         'btnBuscarEmpleado
         '
         Me.btnBuscarEmpleado.Font = New System.Drawing.Font("Mongolian Baiti", 8.142858!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscarEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscarEmpleado.Location = New System.Drawing.Point(420, 157)
-        Me.btnBuscarEmpleado.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnBuscarEmpleado.Location = New System.Drawing.Point(578, 236)
         Me.btnBuscarEmpleado.Name = "btnBuscarEmpleado"
-        Me.btnBuscarEmpleado.Size = New System.Drawing.Size(93, 46)
+        Me.btnBuscarEmpleado.Size = New System.Drawing.Size(128, 69)
         Me.btnBuscarEmpleado.TabIndex = 26
         Me.btnBuscarEmpleado.Text = "Buscar"
         Me.btnBuscarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -121,10 +115,9 @@ Partial Class pntEmpleados
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(50, 219)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(69, 328)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(463, 18)
+        Me.Label3.Size = New System.Drawing.Size(649, 25)
         Me.Label3.TabIndex = 27
         Me.Label3.Text = "Para registrar nuevo empleado, llena los siguientes campos:"
         '
@@ -132,10 +125,9 @@ Partial Class pntEmpleados
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Mongolian Baiti", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(50, 260)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Location = New System.Drawing.Point(69, 390)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(141, 16)
+        Me.Label5.Size = New System.Drawing.Size(185, 23)
         Me.Label5.TabIndex = 28
         Me.Label5.Text = "Nombre completo:"
         '
@@ -143,29 +135,27 @@ Partial Class pntEmpleados
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Mongolian Baiti", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(51, 296)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Location = New System.Drawing.Point(70, 444)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(93, 16)
+        Me.Label6.Size = New System.Drawing.Size(122, 23)
         Me.Label6.TabIndex = 29
         Me.Label6.Text = "Contraseña:"
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(429, 157)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox1.Location = New System.Drawing.Point(590, 236)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(45, 34)
+        Me.PictureBox1.Size = New System.Drawing.Size(62, 51)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 30
         Me.PictureBox1.TabStop = False
         '
         'pntEmpleados
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(927, 515)
+        Me.ClientSize = New System.Drawing.Size(1275, 772)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -177,7 +167,6 @@ Partial Class pntEmpleados
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.btnRegresarEmp)
         Me.Controls.Add(Me.Label4)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "pntEmpleados"
         Me.Text = "pntEmpleados"
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()

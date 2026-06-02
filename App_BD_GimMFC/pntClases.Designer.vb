@@ -79,11 +79,11 @@ Partial Class pntClases
         'dgvEstudiantes
         '
         Me.dgvEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvEstudiantes.Location = New System.Drawing.Point(12, 318)
+        Me.dgvEstudiantes.Location = New System.Drawing.Point(162, 284)
         Me.dgvEstudiantes.Name = "dgvEstudiantes"
         Me.dgvEstudiantes.RowHeadersWidth = 72
         Me.dgvEstudiantes.RowTemplate.Height = 31
-        Me.dgvEstudiantes.Size = New System.Drawing.Size(1235, 426)
+        Me.dgvEstudiantes.Size = New System.Drawing.Size(851, 426)
         Me.dgvEstudiantes.TabIndex = 23
         '
         'btnRegresarComp

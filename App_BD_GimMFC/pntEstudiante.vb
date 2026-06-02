@@ -67,6 +67,9 @@ Public Class pntEstudiante
     End Sub
 
     Private Sub btnBuscarEstudiante_Click_1(sender As Object, e As EventArgs) Handles btnBuscarEstudiante.Click
+
+
+
         ' crear conexión a la base de datos gimnasio
         Dim conexion As New SqlConnection("Data Source=DESKTOP-M9E0OMK\SQLEXPRESS;Initial Catalog=Gimnasio;Integrated Security=True")
 
@@ -106,7 +109,76 @@ Public Class pntEstudiante
     End Sub
 
     Private Sub btnRegistrarEstudiante_Click_1(sender As Object, e As EventArgs) Handles btnRegistrarEstudiante.Click
+        ' 1. Validar que todos los campos estén llenos
+        If String.IsNullOrWhiteSpace(txtNombreEstudiantes.Text) OrElse
+           String.IsNullOrWhiteSpace(txtDireccion.Text) OrElse
+           String.IsNullOrWhiteSpace(txtContacto.Text) OrElse
+           String.IsNullOrWhiteSpace(txtIdEmpleado.Text) Then
 
+            MsgBox("Por favor, complete todos los campos antes de registrar.", MsgBoxStyle.Exclamation, "Aviso")
+            Exit Sub
+        End If
+
+        ' 2. Crear conexión
+        Dim conexion As New SqlConnection("Data Source=DESKTOP-P1KRNOI\SQLEXPRESS;Initial Catalog=Gimnasio;Integrated Security=True")
+
+        Try
+            conexion.Open()
+
+            ' 3. Verificar si ya existe un estudiante con el mismo nombre y fecha de nacimiento
+            Dim QueryVerificar As String = "SELECT COUNT(*) FROM Estudiante WHERE Nombre_Estudiante=@nombre AND FechNac=@fechNac"
+            Dim cmdVerificar As New SqlClient.SqlCommand(QueryVerificar, conexion)
+            cmdVerificar.Parameters.AddWithValue("@nombre", txtNombreEstudiantes.Text)
+            cmdVerificar.Parameters.AddWithValue("@fechNac", dtpFechaNac.Value)
+
+            Dim resultado As Object = cmdVerificar.ExecuteScalar()
+            Dim existe As Integer = 0
+
+            If Not IsDBNull(resultado) Then
+                existe = Convert.ToInt32(resultado)
+            End If
+
+            If existe > 0 Then
+                ' 4. Ya existe un estudiante con ese nombre y fecha de nacimiento
+                MsgBox("El estudiante ya existe en la base de datos.", MsgBoxStyle.Critical, "Duplicado")
+            Else
+                ' 5. Insertar nuevo estudiante y recuperar el IdEstudiante generado
+                Dim QueryInsertar As String = "INSERT INTO Estudiante (Nombre_Estudiante, Direccion, FechNac, Contacto, Fecha_Ingreso, IdEmpleado)
+                                           OUTPUT INSERTED.IdEstudiante
+                                           VALUES (@nombre, @direccion, @fechNac, @contacto, @fechaIngreso, @idEmpleado)"
+
+                Dim cmdInsertar As New SqlClient.SqlCommand(QueryInsertar, conexion)
+                cmdInsertar.Parameters.AddWithValue("@nombre", txtNombreEstudiantes.Text)
+                cmdInsertar.Parameters.AddWithValue("@direccion", txtDireccion.Text)
+                cmdInsertar.Parameters.AddWithValue("@fechNac", dtpFechaNac.Value)
+                cmdInsertar.Parameters.AddWithValue("@contacto", txtContacto.Text)
+                cmdInsertar.Parameters.AddWithValue("@fechaIngreso", dtpFechaIngreso.Value)
+                cmdInsertar.Parameters.AddWithValue("@idEmpleado", Convert.ToInt32(txtIdEmpleado.Text))
+
+                Dim nuevoId As Integer = Convert.ToInt32(cmdInsertar.ExecuteScalar())
+
+                ' 6. Mensaje de éxito con el ID y el nombre
+                MsgBox("Estudiante registrado correctamente." & vbCrLf &
+                       "ID asignado: " & nuevoId & vbCrLf &
+                       "Nombre: " & txtNombreEstudiantes.Text,
+                       MsgBoxStyle.Information, "Éxito")
+            End If
+
+        Catch ex As Exception
+            ' 7. Capturar errores
+            MsgBox("Error al registrar estudiante: " & ex.Message, MsgBoxStyle.Critical, "Error")
+        Finally
+            conexion.Close()
+
+            ' 8. Limpiar todos los campos siempre
+            txtNombreEstudiantes.Clear()
+            txtDireccion.Clear()
+            txtContacto.Clear()
+            txtIdEmpleado.Clear()
+            txtIdEstudiante.Clear()
+            dtpFechaNac.Value = DateTime.Now
+            dtpFechaIngreso.Value = DateTime.Now
+        End Try
     End Sub
 
     Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles txtNombreEstudiantes.TextChanged
@@ -123,5 +195,74 @@ Public Class pntEstudiante
 
     Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles txtIdEmpleado.TextChanged
 
+    End Sub
+
+    Private Sub dtpFechaIngreso_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaIngreso.ValueChanged
+
+    End Sub
+
+    Private Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
+        ' Validar que se haya buscado un estudiante primero
+        If String.IsNullOrWhiteSpace(txtIdEstudiante.Text) Then
+            MsgBox("Primero busque un estudiante por su ID antes de actualizar.", MsgBoxStyle.Exclamation, "Aviso")
+            Exit Sub
+        End If
+
+        ' Validar que los campos estén llenos
+        If String.IsNullOrWhiteSpace(txtNombreEstudiantes.Text) OrElse
+           String.IsNullOrWhiteSpace(txtDireccion.Text) OrElse
+           String.IsNullOrWhiteSpace(txtContacto.Text) OrElse
+           String.IsNullOrWhiteSpace(txtIdEmpleado.Text) Then
+
+            MsgBox("Por favor, complete todos los campos antes de actualizar.", MsgBoxStyle.Exclamation, "Aviso")
+            Exit Sub
+        End If
+
+        Dim conexion As New SqlConnection("Data Source=DESKTOP-P1KRNOI\SQLEXPRESS;Initial Catalog=Gimnasio;Integrated Security=True")
+
+        Try
+            conexion.Open()
+
+            ' Consulta SQL para actualizar los datos del estudiante
+            Dim QueryActualizar As String = "UPDATE Estudiante 
+                                         SET Nombre_Estudiante=@nombre,
+                                             Direccion=@direccion,
+                                             FechNac=@fechNac,
+                                             Contacto=@contacto,
+                                             Fecha_Ingreso=@fechaIngreso,
+                                             IdEmpleado=@idEmpleado
+                                         WHERE IdEstudiante=@idEst"
+
+            Dim cmdActualizar As New SqlClient.SqlCommand(QueryActualizar, conexion)
+            cmdActualizar.Parameters.AddWithValue("@nombre", txtNombreEstudiantes.Text)
+            cmdActualizar.Parameters.AddWithValue("@direccion", txtDireccion.Text)
+            cmdActualizar.Parameters.AddWithValue("@fechNac", dtpFechaNac.Value)
+            cmdActualizar.Parameters.AddWithValue("@contacto", txtContacto.Text)
+            cmdActualizar.Parameters.AddWithValue("@fechaIngreso", dtpFechaIngreso.Value)
+            cmdActualizar.Parameters.AddWithValue("@idEmpleado", Convert.ToInt32(txtIdEmpleado.Text))
+            cmdActualizar.Parameters.AddWithValue("@idEst", Convert.ToInt32(txtIdEstudiante.Text))
+
+            Dim filasAfectadas As Integer = cmdActualizar.ExecuteNonQuery()
+
+            If filasAfectadas > 0 Then
+                MsgBox("Datos del estudiante actualizados correctamente.", MsgBoxStyle.Information, "Éxito")
+            Else
+                MsgBox("No se encontró el estudiante para actualizar.", MsgBoxStyle.Exclamation, "Aviso")
+            End If
+
+        Catch ex As Exception
+            MsgBox("Error al actualizar estudiante: " & ex.Message, MsgBoxStyle.Critical, "Error")
+        Finally
+            conexion.Close()
+
+            ' Limpiar todos los campos siempre
+            txtNombreEstudiantes.Clear()
+            txtDireccion.Clear()
+            txtContacto.Clear()
+            txtIdEmpleado.Clear()
+            txtIdEstudiante.Clear()
+            dtpFechaNac.Value = DateTime.Now
+            dtpFechaIngreso.Value = DateTime.Now
+        End Try
     End Sub
 End Class
