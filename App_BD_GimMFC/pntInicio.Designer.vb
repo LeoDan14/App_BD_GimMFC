@@ -43,10 +43,10 @@ Partial Class pntInicio
         'Label1
         '
         Me.Label1.AutoSize = True
+
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 21.85714!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(75, 86)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(194, 42)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Bienvenido"
