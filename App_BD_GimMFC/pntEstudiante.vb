@@ -14,7 +14,7 @@ Public Class pntEstudiante
 
     Private Sub btnBuscarEstudiante_Click(sender As Object, e As EventArgs)
         ' crear conexión a la base de datos gimnasio
-        Dim conexion As New SqlConnection("Data Source=DESKTOP-M9E0OMK\SQLEXPRESS;Initial Catalog=Gimnasio;Integrated Security=True")
+        Dim conexion As New SqlConnection("Data Source=DESKTOP-P1KRNOI\SQLEXPRESS;Initial Catalog=Gimnasio;Integrated Security=True")
 
         ' consulta sql con parámetro para evitar inyección
         Dim Query As String = "SELECT IdEstudiante, Nombre_Estudiante, Direccion, FechNac, Contacto, Fecha_Ingreso
@@ -68,13 +68,11 @@ Public Class pntEstudiante
 
     Private Sub btnBuscarEstudiante_Click_1(sender As Object, e As EventArgs) Handles btnBuscarEstudiante.Click
 
-
-
         ' crear conexión a la base de datos gimnasio
-        Dim conexion As New SqlConnection("Data Source=DESKTOP-M9E0OMK\SQLEXPRESS;Initial Catalog=Gimnasio;Integrated Security=True")
+        Dim conexion As New SqlConnection("Data Source=DESKTOP-P1KRNOI\SQLEXPRESS;Initial Catalog=Gimnasio;Integrated Security=True")
 
         ' consulta sql con parámetro para evitar inyección
-        Dim Query As String = "SELECT IdEstudiante, Nombre_Estudiante, Direccion, FechNac, Contacto, Fecha_Ingreso
+        Dim Query As String = "SELECT IdEstudiante, Nombre_Estudiante, Direccion, FechNac, Contacto, Fecha_Ingreso, IdEmpleado
                            FROM Estudiante
                            WHERE IdEstudiante=@id"
 
@@ -94,6 +92,7 @@ Public Class pntEstudiante
                     dtpFechaNac.Value = Convert.ToDateTime(sqlread("FechNac"))
                     txtContacto.Text = sqlread("Contacto").ToString()
                     dtpFechaIngreso.Value = Convert.ToDateTime(sqlread("Fecha_Ingreso"))
+                    txtIdEmpleado.Text = sqlread("IdEmpleado").ToString() ' mostrar el empleado que lo registró
                 End While
             Else
                 MsgBox("no se encontró estudiante con ese id.", MsgBoxStyle.Exclamation, "aviso")
@@ -108,12 +107,15 @@ Public Class pntEstudiante
         End Try
     End Sub
 
+
+
+
     Private Sub btnRegistrarEstudiante_Click_1(sender As Object, e As EventArgs) Handles btnRegistrarEstudiante.Click
         ' 1. Validar que todos los campos estén llenos
         If String.IsNullOrWhiteSpace(txtNombreEstudiantes.Text) OrElse
-           String.IsNullOrWhiteSpace(txtDireccion.Text) OrElse
-           String.IsNullOrWhiteSpace(txtContacto.Text) OrElse
-           String.IsNullOrWhiteSpace(txtIdEmpleado.Text) Then
+       String.IsNullOrWhiteSpace(txtDireccion.Text) OrElse
+       String.IsNullOrWhiteSpace(txtContacto.Text) OrElse
+       String.IsNullOrWhiteSpace(txtIdEmpleado.Text) Then
 
             MsgBox("Por favor, complete todos los campos antes de registrar.", MsgBoxStyle.Exclamation, "Aviso")
             Exit Sub
@@ -159,9 +161,10 @@ Public Class pntEstudiante
 
                 ' 6. Mensaje de éxito con el ID y el nombre
                 MsgBox("Estudiante registrado correctamente." & vbCrLf &
-                       "ID asignado: " & nuevoId & vbCrLf &
-                       "Nombre: " & txtNombreEstudiantes.Text,
-                       MsgBoxStyle.Information, "Éxito")
+                   "ID asignado: " & nuevoId & vbCrLf &
+                   "Nombre: " & txtNombreEstudiantes.Text & vbCrLf &
+                   "Registrado por empleado ID: " & txtIdEmpleado.Text,
+                   MsgBoxStyle.Information, "Éxito")
             End If
 
         Catch ex As Exception
@@ -180,6 +183,7 @@ Public Class pntEstudiante
             dtpFechaIngreso.Value = DateTime.Now
         End Try
     End Sub
+
 
     Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles txtNombreEstudiantes.TextChanged
 
