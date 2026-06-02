@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ED96D007-AAE8-4EDB-9C06-84A750A15776}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>App_BD_GimMFC.My.MyApplication</StartupObject>
+    <RootNamespace>App_BD_GimMFC</RootNamespace>
+    <AssemblyName>App_BD_GimMFC</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>App_BD_GimMFC.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>App_BD_GimMFC.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConexionGim.vb" />
+    <Compile Include="pntClases.Designer.vb">
+      <DependentUpon>pntClases.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pntClases.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pntCompras.Designer.vb">
+      <DependentUpon>pntCompras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pntCompras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pntEmpleados.Designer.vb">
+      <DependentUpon>pntEmpleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pntEmpleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pntEstudiante.Designer.vb">
+      <DependentUpon>pntEstudiante.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pntEstudiante.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pntInicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pntInicio.Designer.vb">
+      <DependentUpon>pntInicio.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="pntOpcion.Designer.vb">
+      <DependentUpon>pntOpcion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pntOpcion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pntVentas.Designer.vb">
+      <DependentUpon>pntVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pntVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ptnProveedor.Designer.vb">
+      <DependentUpon>ptnProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ptnProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="pntClases.resx">
+      <DependentUpon>pntClases.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pntCompras.resx">
+      <DependentUpon>pntCompras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pntEmpleados.resx">
+      <DependentUpon>pntEmpleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pntEstudiante.resx">
+      <DependentUpon>pntEstudiante.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pntInicio.resx">
+      <DependentUpon>pntInicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pntOpcion.resx">
+      <DependentUpon>pntOpcion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pntVentas.resx">
+      <DependentUpon>pntVentas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ptnProveedor.resx">
+      <DependentUpon>ptnProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
