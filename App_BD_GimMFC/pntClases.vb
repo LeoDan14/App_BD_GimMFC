@@ -11,7 +11,7 @@ Public Class pntClases
         Dim conexion As New SqlConnection("Data Source=DESKTOP-M9E0OMK\SQLEXPRESS;Initial Catalog=Gimnasio;Integrated Security=True")
 
         ' consulta con join para traer alumnos de la clase seleccionada
-        Dim Query As String = "SELECT e.IdEstudiante, e.Nombre_Estudiante, e.Direccion, e.FechNac, e.Contacto, e.Fecha_Ingreso, e.Estado
+        Dim Query As String = "SELECT e.IdEstudiante, e.Nombre_Estudiante,e.Fecha_Ingreso
                            FROM Estudiante e
                            INNER JOIN Estudiante_Clase ec ON e.IdEstudiante = ec.IdEstudiante
                            INNER JOIN Clase c ON ec.IdClase = c.IdClase
