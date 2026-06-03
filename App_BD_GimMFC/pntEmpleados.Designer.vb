@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class pntEmpleados
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class pntEmpleados
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(pntEmpleados))
         Me.Label4 = New System.Windows.Forms.Label()
@@ -33,19 +33,25 @@ Partial Class pntEmpleados
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtNombreEmpleado = New System.Windows.Forms.TextBox()
+        Me.txtContraseñaEmpleado = New System.Windows.Forms.TextBox()
+        Me.txtPuesto = New System.Windows.Forms.TextBox()
+        Me.txtContacto = New System.Windows.Forms.TextBox()
+        Me.btnRegistrarEmpleado = New System.Windows.Forms.Button()
+        Me.btnActualizarEmpleado = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(205, 68)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label4.Location = New System.Drawing.Point(118, 55)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(216, 48)
+        Me.Label4.Size = New System.Drawing.Size(124, 26)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Empleados"
         '
@@ -54,9 +60,10 @@ Partial Class pntEmpleados
         Me.btnRegresarEmp.Font = New System.Drawing.Font("Mongolian Baiti", 8.142858!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRegresarEmp.Image = CType(resources.GetObject("btnRegresarEmp.Image"), System.Drawing.Image)
         Me.btnRegresarEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnRegresarEmp.Location = New System.Drawing.Point(989, 568)
+        Me.btnRegresarEmp.Location = New System.Drawing.Point(590, 347)
+        Me.btnRegresarEmp.Margin = New System.Windows.Forms.Padding(2)
         Me.btnRegresarEmp.Name = "btnRegresarEmp"
-        Me.btnRegresarEmp.Size = New System.Drawing.Size(157, 116)
+        Me.btnRegresarEmp.Size = New System.Drawing.Size(94, 48)
         Me.btnRegresarEmp.TabIndex = 21
         Me.btnRegresarEmp.Text = "Regresar"
         Me.btnRegresarEmp.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -65,9 +72,10 @@ Partial Class pntEmpleados
         'PictureBox3
         '
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(74, 68)
+        Me.PictureBox3.Location = New System.Drawing.Point(40, 37)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(109, 82)
+        Me.PictureBox3.Size = New System.Drawing.Size(59, 44)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 22
         Me.PictureBox3.TabStop = False
@@ -76,9 +84,10 @@ Partial Class pntEmpleados
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(69, 192)
+        Me.Label2.Location = New System.Drawing.Point(38, 104)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(308, 25)
+        Me.Label2.Size = New System.Drawing.Size(188, 15)
         Me.Label2.TabIndex = 23
         Me.Label2.Text = "Para buscar a un empleado:"
         '
@@ -86,26 +95,30 @@ Partial Class pntEmpleados
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Mongolian Baiti", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(70, 262)
+        Me.Label1.Location = New System.Drawing.Point(38, 142)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(176, 23)
+        Me.Label1.Size = New System.Drawing.Size(106, 13)
         Me.Label1.TabIndex = 24
         Me.Label1.Text = "ID del Empleado:"
         '
         'txtIdEmpleado
         '
-        Me.txtIdEmpleado.Location = New System.Drawing.Point(272, 254)
+        Me.txtIdEmpleado.Location = New System.Drawing.Point(148, 138)
+        Me.txtIdEmpleado.Margin = New System.Windows.Forms.Padding(2)
         Me.txtIdEmpleado.Name = "txtIdEmpleado"
-        Me.txtIdEmpleado.Size = New System.Drawing.Size(280, 29)
+        Me.txtIdEmpleado.Size = New System.Drawing.Size(155, 20)
         Me.txtIdEmpleado.TabIndex = 25
         '
         'btnBuscarEmpleado
         '
         Me.btnBuscarEmpleado.Font = New System.Drawing.Font("Mongolian Baiti", 8.142858!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscarEmpleado.Image = CType(resources.GetObject("btnBuscarEmpleado.Image"), System.Drawing.Image)
         Me.btnBuscarEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscarEmpleado.Location = New System.Drawing.Point(578, 236)
+        Me.btnBuscarEmpleado.Location = New System.Drawing.Point(403, 123)
+        Me.btnBuscarEmpleado.Margin = New System.Windows.Forms.Padding(2)
         Me.btnBuscarEmpleado.Name = "btnBuscarEmpleado"
-        Me.btnBuscarEmpleado.Size = New System.Drawing.Size(128, 69)
+        Me.btnBuscarEmpleado.Size = New System.Drawing.Size(100, 50)
         Me.btnBuscarEmpleado.TabIndex = 26
         Me.btnBuscarEmpleado.Text = "Buscar"
         Me.btnBuscarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -115,9 +128,10 @@ Partial Class pntEmpleados
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(69, 328)
+        Me.Label3.Location = New System.Drawing.Point(38, 178)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(649, 25)
+        Me.Label3.Size = New System.Drawing.Size(396, 15)
         Me.Label3.TabIndex = 27
         Me.Label3.Text = "Para registrar nuevo empleado, llena los siguientes campos:"
         '
@@ -125,9 +139,10 @@ Partial Class pntEmpleados
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Mongolian Baiti", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(69, 390)
+        Me.Label5.Location = New System.Drawing.Point(38, 211)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(185, 23)
+        Me.Label5.Size = New System.Drawing.Size(111, 13)
         Me.Label5.TabIndex = 28
         Me.Label5.Text = "Nombre completo:"
         '
@@ -135,28 +150,123 @@ Partial Class pntEmpleados
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Mongolian Baiti", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(70, 444)
+        Me.Label6.Location = New System.Drawing.Point(38, 241)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(122, 23)
+        Me.Label6.Size = New System.Drawing.Size(74, 13)
         Me.Label6.TabIndex = 29
         Me.Label6.Text = "Contraseña:"
         '
-        'PictureBox1
+        'Label7
         '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(590, 236)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(62, 51)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 30
-        Me.PictureBox1.TabStop = False
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Mongolian Baiti", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(38, 266)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(49, 13)
+        Me.Label7.TabIndex = 30
+        Me.Label7.Text = "Puesto:"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Mongolian Baiti", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(38, 290)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(61, 13)
+        Me.Label8.TabIndex = 31
+        Me.Label8.Text = "Contacto:"
+        '
+        'txtNombreEmpleado
+        '
+        Me.txtNombreEmpleado.Location = New System.Drawing.Point(153, 207)
+        Me.txtNombreEmpleado.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtNombreEmpleado.Name = "txtNombreEmpleado"
+        Me.txtNombreEmpleado.Size = New System.Drawing.Size(155, 20)
+        Me.txtNombreEmpleado.TabIndex = 32
+        '
+        'txtContraseñaEmpleado
+        '
+        Me.txtContraseñaEmpleado.Location = New System.Drawing.Point(153, 237)
+        Me.txtContraseñaEmpleado.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtContraseñaEmpleado.Name = "txtContraseñaEmpleado"
+        Me.txtContraseñaEmpleado.Size = New System.Drawing.Size(155, 20)
+        Me.txtContraseñaEmpleado.TabIndex = 33
+        '
+        'txtPuesto
+        '
+        Me.txtPuesto.Location = New System.Drawing.Point(153, 266)
+        Me.txtPuesto.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtPuesto.Name = "txtPuesto"
+        Me.txtPuesto.Size = New System.Drawing.Size(155, 20)
+        Me.txtPuesto.TabIndex = 34
+        '
+        'txtContacto
+        '
+        Me.txtContacto.Location = New System.Drawing.Point(153, 290)
+        Me.txtContacto.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtContacto.Name = "txtContacto"
+        Me.txtContacto.Size = New System.Drawing.Size(155, 20)
+        Me.txtContacto.TabIndex = 35
+        '
+        'btnRegistrarEmpleado
+        '
+        Me.btnRegistrarEmpleado.Font = New System.Drawing.Font("Mongolian Baiti", 8.142858!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRegistrarEmpleado.Image = CType(resources.GetObject("btnRegistrarEmpleado.Image"), System.Drawing.Image)
+        Me.btnRegistrarEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnRegistrarEmpleado.Location = New System.Drawing.Point(403, 204)
+        Me.btnRegistrarEmpleado.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnRegistrarEmpleado.Name = "btnRegistrarEmpleado"
+        Me.btnRegistrarEmpleado.Size = New System.Drawing.Size(100, 50)
+        Me.btnRegistrarEmpleado.TabIndex = 36
+        Me.btnRegistrarEmpleado.Text = "Registrar"
+        Me.btnRegistrarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnRegistrarEmpleado.UseVisualStyleBackColor = True
+        '
+        'btnActualizarEmpleado
+        '
+        Me.btnActualizarEmpleado.Font = New System.Drawing.Font("Mongolian Baiti", 8.142858!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnActualizarEmpleado.Image = CType(resources.GetObject("btnActualizarEmpleado.Image"), System.Drawing.Image)
+        Me.btnActualizarEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnActualizarEmpleado.Location = New System.Drawing.Point(403, 266)
+        Me.btnActualizarEmpleado.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnActualizarEmpleado.Name = "btnActualizarEmpleado"
+        Me.btnActualizarEmpleado.Size = New System.Drawing.Size(100, 50)
+        Me.btnActualizarEmpleado.TabIndex = 37
+        Me.btnActualizarEmpleado.Text = "Actualizar"
+        Me.btnActualizarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnActualizarEmpleado.UseVisualStyleBackColor = True
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.Font = New System.Drawing.Font("Mongolian Baiti", 8.142858!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminar.Image = CType(resources.GetObject("btnEliminar.Image"), System.Drawing.Image)
+        Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEliminar.Location = New System.Drawing.Point(403, 329)
+        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(100, 50)
+        Me.btnEliminar.TabIndex = 38
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'pntEmpleados
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1275, 772)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.ClientSize = New System.Drawing.Size(695, 406)
+        Me.Controls.Add(Me.btnEliminar)
+        Me.Controls.Add(Me.btnActualizarEmpleado)
+        Me.Controls.Add(Me.btnRegistrarEmpleado)
+        Me.Controls.Add(Me.txtContacto)
+        Me.Controls.Add(Me.txtPuesto)
+        Me.Controls.Add(Me.txtContraseñaEmpleado)
+        Me.Controls.Add(Me.txtNombreEmpleado)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label3)
@@ -167,10 +277,10 @@ Partial Class pntEmpleados
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.btnRegresarEmp)
         Me.Controls.Add(Me.Label4)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "pntEmpleados"
         Me.Text = "pntEmpleados"
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -186,5 +296,13 @@ Partial Class pntEmpleados
     Friend WithEvents Label3 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents txtNombreEmpleado As TextBox
+    Friend WithEvents txtContraseñaEmpleado As TextBox
+    Friend WithEvents txtPuesto As TextBox
+    Friend WithEvents txtContacto As TextBox
+    Friend WithEvents btnRegistrarEmpleado As Button
+    Friend WithEvents btnActualizarEmpleado As Button
+    Friend WithEvents btnEliminar As Button
 End Class

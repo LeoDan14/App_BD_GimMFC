@@ -8,7 +8,7 @@ Public Class pntClases
 
     Private Sub btnBuscarClases_Click(sender As Object, e As EventArgs) Handles btnBuscarClases.Click
         ' conexión a la base de datos gimnasio
-        Dim conexion As New SqlConnection("Data Source=DESKTOP-M9E0OMK\SQLEXPRESS;Initial Catalog=Gimnasio;Integrated Security=True")
+        Dim conexion As New SqlConnection("Data Source=DESKTOP-P1KRNOI\SQLEXPRESS\SQLEXPRESS;Initial Catalog=Gimnasio;Integrated Security=True")
 
         ' consulta con join para traer alumnos de la clase seleccionada
         Dim Query As String = "SELECT e.IdEstudiante, e.Nombre_Estudiante,e.Fecha_Ingreso
