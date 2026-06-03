@@ -30,6 +30,7 @@ Partial Class pntClases
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.dgvEstudiantes = New System.Windows.Forms.DataGridView()
         Me.btnRegresarComp = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvEstudiantes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -37,20 +38,22 @@ Partial Class pntClases
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Times New Roman", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(274, 31)
+        Me.Label4.Font = New System.Drawing.Font("Times New Roman", 25.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Location = New System.Drawing.Point(277, 44)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(77, 26)
+        Me.Label4.Size = New System.Drawing.Size(362, 51)
         Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Clases"
+        Me.Label4.Text = "Clases Impartidas"
         '
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(36, 95)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox2.Location = New System.Drawing.Point(53, 44)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(53, 43)
+        Me.PictureBox2.Size = New System.Drawing.Size(173, 140)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 5
         Me.PictureBox2.TabStop = False
@@ -58,10 +61,10 @@ Partial Class pntClases
         'cbClases
         '
         Me.cbClases.FormattingEnabled = True
-        Me.cbClases.Location = New System.Drawing.Point(126, 95)
-        Me.cbClases.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cbClases.Location = New System.Drawing.Point(44, 281)
+        Me.cbClases.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cbClases.Name = "cbClases"
-        Me.cbClases.Size = New System.Drawing.Size(123, 21)
+        Me.cbClases.Size = New System.Drawing.Size(163, 24)
         Me.cbClases.TabIndex = 7
         '
         'btnBuscarClases
@@ -69,10 +72,10 @@ Partial Class pntClases
         Me.btnBuscarClases.Font = New System.Drawing.Font("Mongolian Baiti", 8.142858!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscarClases.Image = CType(resources.GetObject("btnBuscarClases.Image"), System.Drawing.Image)
         Me.btnBuscarClases.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscarClases.Location = New System.Drawing.Point(302, 90)
-        Me.btnBuscarClases.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnBuscarClases.Location = New System.Drawing.Point(76, 452)
+        Me.btnBuscarClases.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnBuscarClases.Name = "btnBuscarClases"
-        Me.btnBuscarClases.Size = New System.Drawing.Size(70, 30)
+        Me.btnBuscarClases.Size = New System.Drawing.Size(93, 31)
         Me.btnBuscarClases.TabIndex = 22
         Me.btnBuscarClases.Text = "Buscar"
         Me.btnBuscarClases.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -81,12 +84,12 @@ Partial Class pntClases
         'dgvEstudiantes
         '
         Me.dgvEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvEstudiantes.Location = New System.Drawing.Point(88, 154)
-        Me.dgvEstudiantes.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dgvEstudiantes.Location = New System.Drawing.Point(305, 149)
+        Me.dgvEstudiantes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dgvEstudiantes.Name = "dgvEstudiantes"
         Me.dgvEstudiantes.RowHeadersWidth = 72
         Me.dgvEstudiantes.RowTemplate.Height = 31
-        Me.dgvEstudiantes.Size = New System.Drawing.Size(464, 231)
+        Me.dgvEstudiantes.Size = New System.Drawing.Size(619, 284)
         Me.dgvEstudiantes.TabIndex = 23
         '
         'btnRegresarComp
@@ -94,27 +97,38 @@ Partial Class pntClases
         Me.btnRegresarComp.Font = New System.Drawing.Font("Mongolian Baiti", 8.142858!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRegresarComp.Image = CType(resources.GetObject("btnRegresarComp.Image"), System.Drawing.Image)
         Me.btnRegresarComp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnRegresarComp.Location = New System.Drawing.Point(376, 91)
-        Me.btnRegresarComp.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnRegresarComp.Location = New System.Drawing.Point(809, 452)
+        Me.btnRegresarComp.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnRegresarComp.Name = "btnRegresarComp"
-        Me.btnRegresarComp.Size = New System.Drawing.Size(71, 30)
+        Me.btnRegresarComp.Size = New System.Drawing.Size(95, 37)
         Me.btnRegresarComp.TabIndex = 24
         Me.btnRegresarComp.Text = "Regresar"
         Me.btnRegresarComp.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnRegresarComp.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label1.Location = New System.Drawing.Point(41, 241)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(128, 16)
+        Me.Label1.TabIndex = 25
+        Me.Label1.Text = "Seleccione la clase:"
+        '
         'pntClases
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(695, 406)
+        Me.ClientSize = New System.Drawing.Size(927, 500)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnRegresarComp)
         Me.Controls.Add(Me.dgvEstudiantes)
         Me.Controls.Add(Me.btnBuscarClases)
         Me.Controls.Add(Me.cbClases)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label4)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "pntClases"
         Me.Text = "pntClases"
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -131,4 +145,5 @@ Partial Class pntClases
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents dgvEstudiantes As DataGridView
     Friend WithEvents btnRegresarComp As Button
+    Friend WithEvents Label1 As Label
 End Class
