@@ -37,21 +37,22 @@ Partial Class pntCompras
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Times New Roman", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Times New Roman", 25.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(104, 41)
+        Me.Label4.Location = New System.Drawing.Point(361, 25)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(141, 36)
+        Me.Label4.Size = New System.Drawing.Size(195, 51)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Compras"
         '
         'PictureBox3
         '
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(29, 32)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox3.Location = New System.Drawing.Point(23, 137)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(59, 45)
+        Me.PictureBox3.Size = New System.Drawing.Size(79, 55)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 19
         Me.PictureBox3.TabStop = False
@@ -61,10 +62,10 @@ Partial Class pntCompras
         Me.btnRegresarComp.Font = New System.Drawing.Font("Mongolian Baiti", 8.142858!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRegresarComp.Image = CType(resources.GetObject("btnRegresarComp.Image"), System.Drawing.Image)
         Me.btnRegresarComp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnRegresarComp.Location = New System.Drawing.Point(507, 336)
-        Me.btnRegresarComp.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnRegresarComp.Location = New System.Drawing.Point(787, 441)
+        Me.btnRegresarComp.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnRegresarComp.Name = "btnRegresarComp"
-        Me.btnRegresarComp.Size = New System.Drawing.Size(95, 46)
+        Me.btnRegresarComp.Size = New System.Drawing.Size(105, 48)
         Me.btnRegresarComp.TabIndex = 21
         Me.btnRegresarComp.Text = "Regresar"
         Me.btnRegresarComp.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -74,9 +75,10 @@ Partial Class pntCompras
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(107, 86)
+        Me.Label1.Location = New System.Drawing.Point(19, 98)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(271, 15)
+        Me.Label1.Size = New System.Drawing.Size(368, 19)
         Me.Label1.TabIndex = 23
         Me.Label1.Text = "Selecciona el mes, para ver el registro de ventas:"
         '
@@ -84,7 +86,8 @@ Partial Class pntCompras
         '
         Me.btnBuscarCompras.Image = CType(resources.GetObject("btnBuscarCompras.Image"), System.Drawing.Image)
         Me.btnBuscarCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscarCompras.Location = New System.Drawing.Point(413, 86)
+        Me.btnBuscarCompras.Location = New System.Drawing.Point(391, 144)
+        Me.btnBuscarCompras.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnBuscarCompras.Name = "btnBuscarCompras"
         Me.btnBuscarCompras.Size = New System.Drawing.Size(106, 46)
         Me.btnBuscarCompras.TabIndex = 25
@@ -95,24 +98,27 @@ Partial Class pntCompras
         'cbOpcionFecha
         '
         Me.cbOpcionFecha.FormattingEnabled = True
-        Me.cbOpcionFecha.Location = New System.Drawing.Point(110, 111)
+        Me.cbOpcionFecha.Location = New System.Drawing.Point(123, 156)
+        Me.cbOpcionFecha.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cbOpcionFecha.Name = "cbOpcionFecha"
-        Me.cbOpcionFecha.Size = New System.Drawing.Size(178, 21)
+        Me.cbOpcionFecha.Size = New System.Drawing.Size(236, 24)
         Me.cbOpcionFecha.TabIndex = 26
         '
         'dgvCompras
         '
         Me.dgvCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvCompras.Location = New System.Drawing.Point(46, 159)
+        Me.dgvCompras.Location = New System.Drawing.Point(60, 233)
+        Me.dgvCompras.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dgvCompras.Name = "dgvCompras"
-        Me.dgvCompras.Size = New System.Drawing.Size(600, 150)
+        Me.dgvCompras.RowHeadersWidth = 51
+        Me.dgvCompras.Size = New System.Drawing.Size(800, 185)
         Me.dgvCompras.TabIndex = 27
         '
         'pntCompras
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(695, 406)
+        Me.ClientSize = New System.Drawing.Size(927, 500)
         Me.Controls.Add(Me.dgvCompras)
         Me.Controls.Add(Me.cbOpcionFecha)
         Me.Controls.Add(Me.btnBuscarCompras)
@@ -120,7 +126,7 @@ Partial Class pntCompras
         Me.Controls.Add(Me.btnRegresarComp)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Label4)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "pntCompras"
         Me.Text = "pntCompras"
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
