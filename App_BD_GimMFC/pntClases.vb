@@ -8,10 +8,10 @@ Public Class pntClases
 
     Private Sub btnBuscarClases_Click(sender As Object, e As EventArgs) Handles btnBuscarClases.Click
         ' conexión a la base de datos gimnasio
-        Dim conexion As New SqlConnection("Data Source=DESKTOP-P1KRNOI\SQLEXPRESS\SQLEXPRESS;Initial Catalog=Gimnasio;Integrated Security=True")
+        Dim conexion As New SqlConnection("Data Source=DESKTOP-P1KRNOI\SQLEXPRESS;Initial Catalog=Gimnasio;Integrated Security=True")
 
         ' consulta con join para traer alumnos de la clase seleccionada
-        Dim Query As String = "SELECT e.IdEstudiante, e.Nombre_Estudiante,e.Fecha_Ingreso
+        Dim Query As String = "SELECT e.IdEstudiante, e.Nombre_Estudiante, e.Fecha_Ingreso
                            FROM Estudiante e
                            INNER JOIN Estudiante_Clase ec ON e.IdEstudiante = ec.IdEstudiante
                            INNER JOIN Clase c ON ec.IdClase = c.IdClase
@@ -34,16 +34,17 @@ Public Class pntClases
 
             ' si no hay filas, mostrar aviso
             If tabla.Rows.Count = 0 Then
-                MsgBox("no se encontraron alumnos para la clase seleccionada.", MsgBoxStyle.Exclamation, "aviso")
+                MsgBox("No se encontraron alumnos para la clase seleccionada.", MsgBoxStyle.Exclamation, "Aviso")
                 cbClases.Focus()
             End If
 
         Catch ex As Exception
-            MsgBox("error al buscar alumnos: " & ex.Message, MsgBoxStyle.Critical, "error")
+            MsgBox("Error al buscar alumnos: " & ex.Message, MsgBoxStyle.Critical, "Error")
         Finally
             conexion.Close()
         End Try
     End Sub
+
 
     Private Sub dgvClases_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvEstudiantes.CellContentClick
 
@@ -51,7 +52,7 @@ Public Class pntClases
 
     Private Sub pntClases_Load(sender As Object, e As EventArgs) Handles Me.Load
         ' crear conexión a la base de datos gimnasio
-        Dim conexion As New SqlConnection("Data Source=DESKTOP-M9E0OMK\SQLEXPRESS;Initial Catalog=Gimnasio;Integrated Security=True")
+        Dim conexion As New SqlConnection("Data Source=DESKTOP-P1KRNOI\SQLEXPRESS;Initial Catalog=Gimnasio;Integrated Security=True")
 
         ' consulta sql para traer todas las disciplinas
         Dim Query As String = "SELECT Nombre_Disciplina FROM Clase"
