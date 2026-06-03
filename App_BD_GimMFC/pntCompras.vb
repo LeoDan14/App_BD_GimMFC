@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Globalization
 
 Public Class pntCompras
 
@@ -7,25 +8,30 @@ Public Class pntCompras
     End Sub
 
     Private Sub pntCompras_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' llenar combo con pares Año-Mes en formato numérico
-        cbOpcionFecha.Items.Add("2026-01")
-        cbOpcionFecha.Items.Add("2026-02")
-        cbOpcionFecha.Items.Add("2026-03")
+        ' llenar combo con meses y años disponibles
+        cbOpcionFecha.Items.Add("2026 Enero")
+        cbOpcionFecha.Items.Add("2026 Febrero")
+        cbOpcionFecha.Items.Add("2026 Marzo")
+        cbOpcionFecha.Items.Add("2026 Abril")
+        cbOpcionFecha.Items.Add("2026 Mayo")
     End Sub
 
     Private Sub btnBuscarCompras_Click(sender As Object, e As EventArgs) Handles btnBuscarCompras.Click
         Dim conexion As New SqlConnection("Data Source=DESKTOP-P1KRNOI\SQLEXPRESS;Initial Catalog=Gimnasio;Integrated Security=True")
 
         If cbOpcionFecha.SelectedItem Is Nothing Then
-            MsgBox("Seleccione un año-mes en el combo antes de buscar.", MsgBoxStyle.Exclamation, "Aviso")
+            MsgBox("Seleccione un mes y año en el combo antes de buscar.", MsgBoxStyle.Exclamation, "Aviso")
             Exit Sub
         End If
 
-        ' ejemplo: "2026-01"
+        ' ejemplo: "2026 Enero"
         Dim seleccion As String = cbOpcionFecha.SelectedItem.ToString()
-        Dim partes() As String = seleccion.Split("-"c)
+        Dim partes() As String = seleccion.Split(" "c)
         Dim año As Integer = Convert.ToInt32(partes(0))
-        Dim mes As Integer = Convert.ToInt32(partes(1))
+        Dim mesNombre As String = partes(1)
+
+        ' convertir nombre de mes a número (forzar español)
+        Dim mes As Integer = DateTime.ParseExact(mesNombre, "MMMM", New CultureInfo("es-ES")).Month
 
         ' consulta directa con JOIN
         Dim Query As String = "SELECT 
@@ -47,7 +53,7 @@ Public Class pntCompras
 
         Dim cmd As New SqlClient.SqlCommand(Query, conexion)
         cmd.Parameters.AddWithValue("@mes", mes)
-        cmd.Parameters.AddWithValue("@anio", año)
+        cmd.Parameters.AddWithValue("@anio", año) ' ← aquí está la clave: usar "anio" sin ñ
 
         Try
             conexion.Open()
@@ -58,7 +64,7 @@ Public Class pntCompras
             dgvCompras.DataSource = tabla
 
             If tabla.Rows.Count = 0 Then
-                MsgBox("No se encontraron compras para el año-mes seleccionado.", MsgBoxStyle.Exclamation, "Aviso")
+                MsgBox("No se encontraron compras para el mes y año seleccionados.", MsgBoxStyle.Exclamation, "Aviso")
             End If
 
         Catch ex As Exception
@@ -68,5 +74,8 @@ Public Class pntCompras
         End Try
     End Sub
 
-End Class
+    Private Sub cbOpcionFecha_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbOpcionFecha.SelectedIndexChanged
+        ' la búsqueda se hace únicamente al presionar el botón
+    End Sub
 
+End Class
