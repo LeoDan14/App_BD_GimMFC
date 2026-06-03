@@ -63,6 +63,11 @@ Public Class pntEstudiante
     End Sub
 
     Private Sub btnRegresarEst_Click(sender As Object, e As EventArgs) Handles btnRegresarEst.Click
+
+
+
+
+
         Me.Close()
     End Sub
 
